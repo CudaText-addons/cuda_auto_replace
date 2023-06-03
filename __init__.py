@@ -95,7 +95,7 @@ class Command:
         print(log_msg)
 
     def get_snip_list_current(self):
-        lexer = ed.get_prop(PROP_LEXER_CARET).lower()
+        lexer = ed.get_prop(PROP_LEXER_CARET).lower().replace('php_', 'php')
         return self.snips.get(lexer, [])
 
     def get_item_for_replace(self, word):
